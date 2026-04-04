@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.3.0
+    container_name: mysql
+    restart: always
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "Sabari@95"
+      MYSQL_DATABASE: order_service
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
